@@ -3,17 +3,20 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
 import { newsItems } from "@/data/mock"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const News: React.FC = () => {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-24 px-6" style={{ backgroundColor: '#f8f9fa' }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl md:text-5xl font-light" style={{ color: '#191e26' }}>
-            News
+            {t('news.title')}
           </h2>
           <button className="flex items-center space-x-2 text-gray-600 hover:text-[#2a6553] transition-colors group">
-            <span className="font-medium">More</span>
+            <span className="font-medium">{t('news.more')}</span>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

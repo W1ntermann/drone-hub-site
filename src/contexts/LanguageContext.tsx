@@ -1,6 +1,8 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect } from 'react'
+import uaTranslations from '../translations/ua.json'
+import enTranslations from '../translations/en.json'
 
 type Language = 'en' | 'ua'
 
@@ -55,13 +57,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   )
 }
 
-// Import translations
 const getTranslations = (lang: Language) => {
   switch (lang) {
     case 'en':
-      return require('../translations/en.json')
+      return enTranslations
     case 'ua':
     default:
-      return require('../translations/ua.json')
+      return uaTranslations
   }
 }
