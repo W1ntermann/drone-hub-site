@@ -5,8 +5,10 @@ import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import { navigationItems } from "@/data/mock"
 import Link from "next/link"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const Navigation: React.FC = () => {
+  const { language, setLanguage, t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
@@ -49,6 +51,41 @@ const Navigation: React.FC = () => {
     }))
   }
 
+  const getNavTranslation = (label: string) => {
+    const key = `nav.${label.toLowerCase().replace(/\s+/g, '').replace('&', '')}`
+    return t(key) !== key ? t(key) : label
+  }
+
+  const getDropdownTranslation = (label: string) => {
+    const cleanLabel = label.toLowerCase()
+      .replace(/\s+/g, '')
+      .replace('&', '')
+      .replace('precision', '')
+      .replace('fire', '')
+      .replace('control', '')
+    
+    const keyMap: Record<string, string> = {
+      'aboutus': 'nav.company.about',
+      'news': 'nav.company.news', 
+      'mediaassets': 'nav.company.media',
+      'deepreconnaissance': 'nav.applications.reconnaissance',
+      'targetingandprecisionfirecontrol': 'nav.applications.targeting',
+      'radiofrequencyintelligence': 'nav.applications.rf',
+      'datalinkextension': 'nav.applications.datalink',
+      'bordercontrol': 'nav.applications.border',
+      'maritimesurveillance': 'nav.applications.maritime',
+      'powerlineinspection': 'nav.applications.powerlines',
+      'pipelinemonitoring': 'nav.applications.pipelines',
+      'roadinspection': 'nav.applications.roads',
+      'wildfireprevention': 'nav.applications.wildfire',
+      'training': 'nav.services.training',
+      'support': 'nav.services.support',
+      'rent': 'nav.services.rent'
+    }
+    
+    return keyMap[cleanLabel] ? t(keyMap[cleanLabel]) : label
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 p-4">
       <div 
@@ -84,7 +121,7 @@ const Navigation: React.FC = () => {
               >
                 {item.hasDropdown ? (
                   <button className="flex items-center space-x-1 text-gray-700 hover:text-[#2a6553] transition-all duration-300 font-medium py-2 px-4 rounded-full hover:bg-[#2a6553]/5 hover:shadow-md hover:shadow-[#2a6553]/10 group">
-                    <span className="group-hover:scale-105 transition-transform duration-200">{item.label}</span>
+                    <span className="group-hover:scale-105 transition-transform duration-200">{getNavTranslation(item.label)}</span>
                     <ChevronDown 
                       size={16} 
                       className={`transition-all duration-300 group-hover:text-[#2a6553] ${
@@ -97,7 +134,7 @@ const Navigation: React.FC = () => {
                     href={item.href || '#'} 
                     className="text-gray-700 hover:text-[#2a6553] transition-all duration-300 font-medium py-2 px-4 rounded-full hover:bg-[#2a6553]/5 hover:shadow-md hover:shadow-[#2a6553]/10 hover:scale-105"
                   >
-                    {item.label}
+                    {getNavTranslation(item.label)}
                   </Link>
                 )}
                 
@@ -117,7 +154,7 @@ const Navigation: React.FC = () => {
                         href={dropdownItem.href}
                         className="block px-6 py-3 text-sm text-gray-700 hover:text-[#2a6553] hover:bg-[#2a6553]/5 transition-all duration-200 hover:translate-x-1 hover:shadow-md hover:shadow-[#2a6553]/10 mx-3 rounded-full group"
                       >
-                        <span className="group-hover:font-medium transition-all duration-200">{dropdownItem.label}</span>
+                        <span className="group-hover:font-medium transition-all duration-200">{getDropdownTranslation(dropdownItem.label)}</span>
                       </Link>
                     ))}
                   </div>
@@ -128,10 +165,24 @@ const Navigation: React.FC = () => {
 
           {/* Language Switcher */}
           <div className="hidden lg:flex items-center bg-gray-100/50 rounded-full p-1 backdrop-blur-sm">
-            <button className="px-4 py-2 text-sm text-gray-500 hover:text-[#2a6553] transition-all duration-200 rounded-full hover:bg-white/70 hover:shadow-sm">
+            <button 
+              onClick={() => setLanguage('ua')}
+              className={`px-4 py-2 text-sm transition-all duration-200 rounded-full ${
+                language === 'ua' 
+                  ? 'font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] shadow-lg shadow-[#2a6553]/30 hover:shadow-xl hover:shadow-[#2a6553]/40 hover:scale-105' 
+                  : 'text-gray-500 hover:text-[#2a6553] hover:bg-white/70 hover:shadow-sm'
+              }`}
+            >
               UA
             </button>
-            <button className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] rounded-full shadow-lg shadow-[#2a6553]/30 hover:shadow-xl hover:shadow-[#2a6553]/40 hover:scale-105 transition-all duration-200">
+            <button 
+              onClick={() => setLanguage('en')}
+              className={`px-4 py-2 text-sm transition-all duration-200 rounded-full ${
+                language === 'en' 
+                  ? 'font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] shadow-lg shadow-[#2a6553]/30 hover:shadow-xl hover:shadow-[#2a6553]/40 hover:scale-105' 
+                  : 'text-gray-500 hover:text-[#2a6553] hover:bg-white/70 hover:shadow-sm'
+              }`}
+            >
               EN
             </button>
           </div>
@@ -160,7 +211,7 @@ const Navigation: React.FC = () => {
                       onClick={() => toggleMobileDropdown(item.label)}
                       className="flex items-center justify-between w-full text-left px-5 py-3 text-gray-700 hover:text-[#2a6553] hover:bg-[#2a6553]/5 rounded-full transition-all duration-200 font-medium hover:shadow-md hover:shadow-[#2a6553]/10 group"
                     >
-                      <span className="group-hover:scale-105 transition-transform duration-200">{item.label}</span>
+                      <span className="group-hover:scale-105 transition-transform duration-200">{getNavTranslation(item.label)}</span>
                       <ChevronRight 
                         size={16} 
                         className={`transition-all duration-300 group-hover:text-[#2a6553] ${
@@ -177,7 +228,7 @@ const Navigation: React.FC = () => {
                             className="block px-4 py-2 text-sm text-gray-600 hover:text-[#2a6553] hover:bg-white/70 rounded-full transition-all duration-200 hover:translate-x-1 hover:shadow-sm"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {dropdownItem.label}
+                            {getDropdownTranslation(dropdownItem.label)}
                           </Link>
                         ))}
                       </div>
@@ -189,7 +240,7 @@ const Navigation: React.FC = () => {
                     className="block w-full text-left px-5 py-3 text-gray-700 hover:text-[#2a6553] hover:bg-[#2a6553]/5 rounded-full transition-all duration-200 font-medium hover:shadow-md hover:shadow-[#2a6553]/10 hover:scale-105"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.label}
+                    {getNavTranslation(item.label)}
                   </Link>
                 )}
               </div>
@@ -198,10 +249,24 @@ const Navigation: React.FC = () => {
             {/* Mobile Language Switcher */}
             <div className="flex items-center justify-center mt-6 pt-4 border-t border-gray-200/50">
               <div className="flex items-center bg-gray-100/50 rounded-full p-1 backdrop-blur-sm">
-                <button className="px-4 py-2 text-sm text-gray-500 hover:text-[#2a6553] transition-all duration-200 rounded-full hover:bg-white/70">
+                <button 
+                  onClick={() => setLanguage('ua')}
+                  className={`px-4 py-2 text-sm transition-all duration-200 rounded-full ${
+                    language === 'ua' 
+                      ? 'font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] shadow-lg shadow-[#2a6553]/30' 
+                      : 'text-gray-500 hover:text-[#2a6553] hover:bg-white/70'
+                  }`}
+                >
                   UA
                 </button>
-                <button className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] rounded-full shadow-lg shadow-[#2a6553]/30">
+                <button 
+                  onClick={() => setLanguage('en')}
+                  className={`px-4 py-2 text-sm transition-all duration-200 rounded-full ${
+                    language === 'en' 
+                      ? 'font-medium text-white bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] shadow-lg shadow-[#2a6553]/30' 
+                      : 'text-gray-500 hover:text-[#2a6553] hover:bg-white/70'
+                  }`}
+                >
                   EN
                 </button>
               </div>

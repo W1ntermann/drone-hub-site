@@ -1,7 +1,10 @@
 import React from "react"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage()
+  
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image with Overlay */}
@@ -21,12 +24,12 @@ const Hero: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-3xl">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-white mb-6 tracking-wider">
-              ADVANTAGE
+              {t('hero.title')}
               <br />
-              <span className="font-normal">FORGED IN FIRE</span>
+              <span className="font-normal">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 font-light tracking-wide">
-              Small Tactical Unmanned Aerial Systems
+              {t('hero.description')}
             </p>
           </div>
         </div>
