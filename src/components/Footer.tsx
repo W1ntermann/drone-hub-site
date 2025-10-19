@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   }
 
   return (
-    <footer className="relative py-24 px-6 overflow-hidden">
+    <footer className="relative py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
@@ -35,25 +35,25 @@ const Footer: React.FC = () => {
 
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 sm:mb-6">
           Request Presentation
         </h2>
-        <p className="text-xl text-gray-300 mb-12">
+        <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 px-4">
           Get detailed information about our UAV systems
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-16">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl mx-auto mb-12 sm:mb-16 px-4">
           <Input
             type="email"
             placeholder="Your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 px-6 py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-white"
+            className="flex-1 px-4 sm:px-6 py-4 sm:py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-white text-sm sm:text-base"
             required
           />
           <Button
             type="submit"
-            className="px-8 py-6 text-white font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+            className="px-6 sm:px-8 py-4 sm:py-6 text-white font-medium hover:opacity-90 transition-opacity whitespace-nowrap text-sm sm:text-base"
             style={{ backgroundColor: '#2a6553' }}
           >
             Request

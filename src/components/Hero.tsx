@@ -23,14 +23,14 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-white mb-6 tracking-wider">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-4 sm:mb-6 tracking-wider leading-tight">
               {t('hero.title')}
               <br />
               <span className="font-normal">{t('hero.subtitle')}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 font-light tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 font-light tracking-wide leading-relaxed">
               {t('hero.description')}
             </p>
           </div>

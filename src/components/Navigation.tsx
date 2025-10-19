@@ -87,18 +87,18 @@ const Navigation: React.FC = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 p-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 p-2 sm:p-4">
       <div 
         className={`max-w-7xl mx-auto transition-all duration-500 ease-out ${
           scrolled
             ? "bg-white/90 backdrop-blur-xl shadow-2xl shadow-black/10 border border-white/20"
             : "bg-white/70 backdrop-blur-lg shadow-xl shadow-black/5 border border-white/30"
-        } rounded-full px-8 py-4`}
+        } rounded-full px-4 sm:px-8 py-3 sm:py-4`}
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
         <Link href="/" className="flex items-center">
-          <div className="w-16 h-16 rounded-full shadow-lg shadow-[#2a6553]/30 ring-2 ring-white/20 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-lg shadow-[#2a6553]/30 ring-2 ring-white/20 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden">
           <Image 
           src="/assets/logo-site-drone.png"
           alt="Logo"
@@ -202,7 +202,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-4 space-y-2 border-t border-gray-200/50 pt-4">
+          <div className="lg:hidden mt-4 sm:mt-6 pb-4 space-y-2 border-t border-gray-200/50 pt-4 max-h-[70vh] overflow-y-auto">
             {navigationItems.map((item, index) => (
               <div key={index} className="space-y-2">
                 {item.hasDropdown ? (

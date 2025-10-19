@@ -67,3 +67,65 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Мобільні оптимізації */
+@layer utilities {
+  /* Приховати скролбар для горизонтального скролу */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Покращення тексту на мобільних */
+  @media (max-width: 640px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    /* Покращення кліків на мобільних */
+    button, a, [role="button"] {
+      touch-action: manipulation;
+    }
+    
+    /* Запобігання горизонтальному скролу */
+    html, body {
+      overflow-x: hidden;
+    }
+    
+    /* Покращення відображення зображень */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  /* Анімація fadeIn для табів */
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Покращення line-clamp для старих браузерів */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
