@@ -1,4 +1,4 @@
-import type { NavigationItem, DropdownItem, Feature, UseCase, PayloadSpec, NewsItem, OperatingZone } from "@/types"
+import type { NavigationItem, Feature, UseCase, PayloadSpec, NewsItem, OperatingZone } from "@/types"
 
 // Mock data for Skyeton website clone
 // This file contains all the static data used in the frontend

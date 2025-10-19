@@ -178,7 +178,7 @@ export default function ReconnaissancePage() {
         <div className="bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] rounded-3xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">Deploy Deep Reconnaissance</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get detailed intelligence from behind enemy lines with Raybird's advanced reconnaissance capabilities
+            Get detailed intelligence from behind enemy lines with Raybird&apos;s advanced reconnaissance capabilities
           </p>
           <button className="bg-white text-[#2a6553] px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-200">
             Request Mission Planning

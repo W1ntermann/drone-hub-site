@@ -27,12 +27,12 @@ const About: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Skyeton is a Ukrainian-born unmanned aerial systems manufacturer with a 19-year legacy. 
-              Since the start of the russian full-scale invasion, we've been building a universal UAV 
+              Since the start of the russian full-scale invasion, we&apos;ve been building a universal UAV 
               platform — to survive and to win
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              We weren't given time for theory. Under fire, we developed Raybird — the best-in-class 
-              UAV system with 350,000+ hours of combat missions. We've grown into a team of 500+ people 
+              We weren&apos;t given time for theory. Under fire, we developed Raybird — the best-in-class 
+              UAV system with 350,000+ hours of combat missions. We&apos;ve grown into a team of 500+ people 
               and built one of the most advanced R&D departments in our field, with 100+ engineers onboard
             </p>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">

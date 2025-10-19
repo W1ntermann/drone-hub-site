@@ -1,9 +1,9 @@
 import React from "react"
-import { Shield, Clock, Zap, Package, Award, Timer } from "lucide-react"
+import { Shield, Clock, Zap, Package, Award, Timer, LucideIcon } from "lucide-react"
 import { features } from "@/data/mock"
 
 interface FeatureIconMap {
-  [key: string]: React.ComponentType<{ className?: string; size?: number }>
+  [key: string]: LucideIcon
 }
 
 const iconMap: FeatureIconMap = {

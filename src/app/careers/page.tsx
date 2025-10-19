@@ -74,14 +74,14 @@ export default function CareersPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Work at Skyeton?</h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                At Skyeton, we're not just building UAVs – we're creating technology that saves lives 
+                At Skyeton, we&apos;re not just building UAVs – we&apos;re creating technology that saves lives 
                 and protects freedom. Our team of 500+ professionals works on the cutting edge of 
                 aerospace technology, with 100+ engineers in our advanced R&D department.
               </p>
               <p>
                 We offer a unique opportunity to work on real-world applications with immediate impact. 
-                Our Raybird UAV system has proven itself with 350,000+ combat flight hours, and we're 
-                constantly pushing the boundaries of what's possible.
+                Our Raybird UAV system has proven itself with 350,000+ combat flight hours, and we&apos;re 
+                constantly pushing the boundaries of what&apos;s possible.
               </p>
               <p>
                 Join us in our mission to develop innovative solutions for defense, surveillance, 
