@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="pt-8 border-t border-white/10">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Skyeton. All rights reserved.
+            © {new Date().getFullYear()} Drone Hub. All rights reserved.
           </p>
         </div>
       </div>
