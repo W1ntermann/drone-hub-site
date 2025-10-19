@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import { navigationItems } from "@/data/mock"
 import Link from "next/link"
+import Image from "next/image"
 
 const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -59,9 +60,18 @@ const Navigation: React.FC = () => {
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2a6553] to-[#1e4a3a] shadow-lg shadow-[#2a6553]/30 ring-2 ring-white/20 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <Link href="/" className="flex items-center">
+          <div className="w-16 h-16 rounded-full shadow-lg shadow-[#2a6553]/30 ring-2 ring-white/20 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden">
+          <Image 
+          src="/assets/logo-site-drone.png"
+          alt="Logo"
+          width={100}
+          height={100}
+          className="object-cover w-full h-full"
+          priority
+        />
           </div>
+        </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
