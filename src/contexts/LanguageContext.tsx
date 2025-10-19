@@ -47,7 +47,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   // Translation function
   const t = (key: string): string => {
     const translations = getTranslations(language)
-    return translations[key] || key
+    return (translations as Record<string, string>)[key] || key
   }
 
   return (

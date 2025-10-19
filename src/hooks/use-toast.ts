@@ -26,6 +26,7 @@ const actionTypes = {
 } as const
 
 // Use actionTypes to prevent unused variable warning
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ADD_TOAST = actionTypes.ADD_TOAST
 
 let count = 0
