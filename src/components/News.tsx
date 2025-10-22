@@ -4,11 +4,12 @@ import React from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
-import { newsItems } from "@/data/mock"
 import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslatedNewsItems } from "@/utils/translations"
 
 const News: React.FC = () => {
   const { t } = useLanguage()
+  const translatedNewsItems = getTranslatedNewsItems(t)
   
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6" style={{ backgroundColor: '#f8f9fa' }}>
@@ -24,7 +25,7 @@ const News: React.FC = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {newsItems.map((item, index) => (
+          {translatedNewsItems.map((item, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group border-0"
@@ -37,7 +38,7 @@ const News: React.FC = () => {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-3 left-3 bg-white px-2 py-1 rounded text-xs font-medium">
-                  News
+                  {t('news.title')}
                 </div>
               </div>
               <CardContent className="p-4 sm:p-6">

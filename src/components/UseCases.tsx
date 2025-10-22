@@ -4,17 +4,20 @@ import React, { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useCases } from "@/data/mock"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslatedUseCases } from "@/utils/translations"
 
 const UseCases: React.FC = () => {
+  const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
+  const translatedUseCases = getTranslatedUseCases(t)
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % useCases.length)
+    setCurrentSlide((prev) => (prev + 1) % translatedUseCases.length)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + useCases.length) % useCases.length)
+    setCurrentSlide((prev) => (prev - 1 + translatedUseCases.length) % translatedUseCases.length)
   }
 
   return (
@@ -22,8 +25,8 @@ const UseCases: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src={useCases[currentSlide].image}
-          alt={useCases[currentSlide].title}
+          src={translatedUseCases[currentSlide].image}
+          alt={translatedUseCases[currentSlide].title}
           fill
           className="object-cover transition-opacity duration-700"
         />
@@ -35,19 +38,19 @@ const UseCases: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
           <div className="max-w-2xl">
             <p className="text-4xl sm:text-5xl md:text-6xl font-light text-white/40 mb-3 sm:mb-4">
-              {useCases[currentSlide].number}
+              {translatedUseCases[currentSlide].number}
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4 sm:mb-6 leading-tight">
-              {useCases[currentSlide].title}
+              {translatedUseCases[currentSlide].title}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-              {useCases[currentSlide].description}
+              {translatedUseCases[currentSlide].description}
             </p>
             <Button
               className="text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
               style={{ backgroundColor: '#2a6553' }}
             >
-              Learn More
+              {t('usecases.learn_more')}
             </Button>
           </div>
         </div>
@@ -71,7 +74,7 @@ const UseCases: React.FC = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-[#191e26]/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
           <div className="flex overflow-x-auto space-x-2 sm:space-x-4 scrollbar-hide">
-            {useCases.map((useCase, index) => (
+            {translatedUseCases.map((useCase, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}

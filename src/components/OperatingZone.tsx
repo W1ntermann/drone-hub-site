@@ -1,20 +1,26 @@
+"use client"
+
 import React from "react"
 import Image from "next/image"
-import { operatingZones } from "@/data/mock"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslatedOperatingZones } from "@/utils/translations"
 
 const OperatingZone: React.FC = () => {
+  const { t } = useLanguage()
+  const translatedOperatingZones = getTranslatedOperatingZones(t)
+  
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-3 sm:mb-4" style={{ color: '#191e26' }}>
-            Raybird
+            {t('operating.raybird')}
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600">Operating Zone</p>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600">{t('operating.title')}</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-          {operatingZones.map((zone, index) => (
+          {translatedOperatingZones.map((zone, index) => (
             <div 
               key={index}
               className={`text-center p-6 sm:p-8 rounded-lg border-2 transition-all duration-300 ${
