@@ -4,7 +4,7 @@ import React from "react"
 import Navigation from "./Navigation"
 import Footer from "./Footer"
 
-interface PageLayoutProps {
+export interface PageLayoutProps {
   title: string
   subtitle?: string
   children: React.ReactNode

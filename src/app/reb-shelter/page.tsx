@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { getTranslatedFeatures, getTranslatedPayloads, getTranslatedOperatingZones } from "@/utils/translations"
 
-export default function RaybirdPage() {
+export default function REBShelterPage() {
   const { t } = useLanguage()
   const translatedFeatures = getTranslatedFeatures(t)
   const translatedPayloads = getTranslatedPayloads(t)

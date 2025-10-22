@@ -17,7 +17,7 @@ export const navigationItems: NavigationItem[] = [
   { 
     label: "Raybird UAS", 
     hasDropdown: false,
-    href: "/raybird"
+    href: "/reb-shelter"
   },
   { 
     label: "Applications", 

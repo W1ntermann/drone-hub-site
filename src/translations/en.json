@@ -71,12 +71,12 @@
   "payload.rf": "Radio Frequency Locator",
 
   "operating.title": "Operating Zone",
-  "operating.raybird": "Raybird",
+  "operating.raybird": "EW Shelter",
 
   "usecases.learn_more": "Learn More",
 
   "mock.navigation.company": "Company",
-  "mock.navigation.raybird": "Raybird UAS",
+  "mock.navigation.raybird": "EW Shelter",
   "mock.navigation.applications": "Applications",
   "mock.navigation.services": "Services",
   "mock.navigation.careers": "Careers",
@@ -119,7 +119,7 @@
   "mock.usecases.02.title": "Target Acquisition and Precision Fire Control",
   "mock.usecases.02.desc": "Provides accurate coordinates for artillery systems (Caesar, Krab), adjusts fire missions, and confirms target elimination. Interacts with HIMARS and other long-range systems",
   "mock.usecases.03.title": "Radio Frequency Reconnaissance",
-  "mock.usecases.03.desc": "Raybird uses radio frequency payloads to detect and identify enemy systems",
+  "mock.usecases.03.desc": "EW Shelter uses radio frequency payloads to detect and identify enemy systems",
   "mock.usecases.04.title": "Extend Data Transmission",
   "mock.usecases.04.desc": "Data Link Extension by 50–80 km",
   "mock.usecases.05.title": "Border Control",
@@ -159,8 +159,8 @@
   "mock.payloads.rf.spec1": "Effective triangulation of enemy electronic systems at distances over 25 km",
 
   "mock.operating.zone1.desc": "Typical Flight Range for Small\nUAVs (up to 25 kg)",
-  "mock.operating.zone2.desc": "Direct Online Link in\nRaybird",
-  "mock.operating.zone3.desc": "Total Flight Range of\nRaybird",
+  "mock.operating.zone2.desc": "Direct Online Link in\nEW Shelter",
+  "mock.operating.zone3.desc": "Total Flight Range of\nEW Shelter",
 
   "mock.news.item1.title": "Skyeton Supports the 5th All-Ukrainian Engineering Hackathon SmaRTF",
   "mock.news.item1.excerpt": "On October 17, the All-Ukrainian Engineering...",
@@ -171,7 +171,7 @@
   "mock.news.item4.title": "Skyeton and Bertel O. Steen Defence & Security AS at Army Technology Days 2025",
   "mock.news.item4.excerpt": "Skyeton, together with Bertel O. Steen...",
 
-  "raybird.title": "Raybird UAS",
+  "raybird.title": "EW Shelter",
   "raybird.subtitle": "Small Tactical Unmanned Aerial Systems - War-hardened, versatile, and efficient",
   "raybird.key_features": "Key Features",
   "raybird.technical_specs": "Technical Specifications",
@@ -181,8 +181,8 @@
   "raybird.mission_success": "Mission Success",
   "raybird.operating_zones": "Operating Zones",
   "raybird.payload_types": "Payload Types",
-  "raybird.ready_deploy": "Ready to Deploy Raybird?",
-  "raybird.contact_team": "Contact our team to learn more about Raybird capabilities and deployment options",
+  "raybird.ready_deploy": "Ready to Deploy EW Shelter?",
+  "raybird.contact_team": "Contact our team to learn more about EW Shelter capabilities and deployment options",
   "raybird.request_demo": "Request Demo",
   "raybird.download_specs": "Download Specs",
 
