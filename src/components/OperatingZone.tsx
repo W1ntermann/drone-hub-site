@@ -14,7 +14,7 @@ const OperatingZone: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-3 sm:mb-4" style={{ color: '#191e26' }}>
-            {t('operating.raybird')}
+          {t('operating.ewshelter')}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600">{t('operating.title')}</p>
         </div>

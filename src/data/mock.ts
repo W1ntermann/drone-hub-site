@@ -15,7 +15,7 @@ export const navigationItems: NavigationItem[] = [
     ]
   },
   { 
-    label: "Raybird UAS", 
+    label: "REB Shelter", 
     hasDropdown: false,
     href: "/reb-shelter"
   },
@@ -24,24 +24,14 @@ export const navigationItems: NavigationItem[] = [
     hasDropdown: true,
     dropdownItems: [
       { label: "Deep Reconnaissance", href: "/applications/reconnaissance" },
-      { label: "Targeting and Precision Fire Control", href: "/applications/targeting" },
-      { label: "Radio Frequency Intelligence", href: "/applications/rf-intelligence" },
-      { label: "Data Link Extension", href: "/applications/data-link" },
-      { label: "Border Control", href: "/applications/border-control" },
-      { label: "Maritime Surveillance", href: "/applications/maritime" },
-      { label: "Power Line Inspection", href: "/applications/power-lines" },
-      { label: "Pipeline Monitoring", href: "/applications/pipelines" },
-      { label: "Road Inspection", href: "/applications/roads" },
-      { label: "Wildfire Prevention", href: "/applications/wildfire" }
+      { label: "Targeting and Precision Fire Control", href: "/applications/targeting" }
     ]
   },
   { 
     label: "Services", 
     hasDropdown: true,
     dropdownItems: [
-      { label: "Training", href: "/services/training" },
-      { label: "Support", href: "/services/support" },
-      { label: "Rent", href: "/services/rent" }
+      { label: "Training", href: "/services/training" }
     ]
   },
   { 

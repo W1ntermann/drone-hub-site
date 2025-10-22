@@ -8,7 +8,8 @@ export const getTranslatedNavigationItems = (t: (key: string) => string): Naviga
     // Special mapping for navigation items
     const navKeyMap: Record<string, string> = {
       'company': 'mock.navigation.company',
-      'raybirduas': 'mock.navigation.raybird',
+      'rebshelter': 'mock.navigation.raybird',
+      'ewshelter': 'mock.navigation.raybird',
       'applications': 'mock.navigation.applications',
       'services': 'mock.navigation.services',
       'careers': 'mock.navigation.careers',
