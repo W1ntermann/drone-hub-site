@@ -12,13 +12,13 @@ export default function REBShelterPage() {
   const translatedOperatingZones = getTranslatedOperatingZones(t)
   return (
     <PageLayout 
-      title={t('raybird.title')} 
-      subtitle={t('raybird.subtitle')}
+      title={t('ewshelter.title')} 
+      subtitle={t('ewshelter.subtitle')}
       backgroundImage="https://images.unsplash.com/photo-1738748140319-b07cd28c41d2?w=1920&q=80"
     >
       {/* Key Features */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('raybird.key_features')}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('ewshelter.key_features')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {translatedFeatures.map((feature, index) => (
             <div key={index} className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -34,24 +34,24 @@ export default function REBShelterPage() {
 
       {/* Technical Specifications */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('raybird.technical_specs')}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('ewshelter.technical_specs')}</h2>
         <div className="bg-white rounded-3xl p-8 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-[#2a6553] mb-2">28+</div>
-              <div className="text-gray-600">{t('raybird.flight_hours')}</div>
+              <div className="text-gray-600">{t('ewshelter.flight_hours')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#2a6553] mb-2">200</div>
-              <div className="text-gray-600">{t('raybird.max_flights')}</div>
+              <div className="text-gray-600">{t('ewshelter.max_flights')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#2a6553] mb-2">25</div>
-              <div className="text-gray-600">{t('raybird.assembly_time')}</div>
+              <div className="text-gray-600">{t('ewshelter.assembly_time')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#2a6553] mb-2">90%+</div>
-              <div className="text-gray-600">{t('raybird.mission_success')}</div>
+              <div className="text-gray-600">{t('ewshelter.mission_success')}</div>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function REBShelterPage() {
 
       {/* Operating Zones */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('raybird.operating_zones')}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('ewshelter.operating_zones')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {translatedOperatingZones.map((zone, index) => (
             <div 
@@ -91,7 +91,7 @@ export default function REBShelterPage() {
 
       {/* Payload Types */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('raybird.payload_types')}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('ewshelter.payload_types')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {translatedPayloads.map((payload, index) => (
             <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -125,16 +125,16 @@ export default function REBShelterPage() {
       {/* CTA Section */}
       <div className="text-center">
         <div className="bg-gradient-to-r from-[#2a6553] to-[#1e4a3a] rounded-3xl p-12 text-white">
-          <h2 className="text-3xl font-bold mb-4">{t('raybird.ready_deploy')}</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('ewshelter.ready_deploy')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            {t('raybird.contact_team')}
+            {t('ewshelter.contact_team')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#2a6553] px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-200">
-              {t('raybird.request_demo')}
+              {t('ewshelter.request_demo')}
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-[#2a6553] transition-all duration-200">
-              {t('raybird.download_specs')}
+              {t('ewshelter.download_specs')}
             </button>
           </div>
         </div>

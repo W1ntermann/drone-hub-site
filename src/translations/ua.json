@@ -76,7 +76,7 @@
   "usecases.learn_more": "Дізнатися більше",
 
   "mock.navigation.company": "Компанія",
-  "mock.navigation.ewshelter": "EW Shelter",
+  "mock.navigation.raybird": "РЕБ Шелтер",
   "mock.navigation.applications": "Застосування",
   "mock.navigation.services": "Послуги",
   "mock.navigation.careers": "Кар'єра",
@@ -171,7 +171,7 @@
   "mock.news.item4.title": "Skyeton та Bertel O. Steen Defence & Security AS на Army Technology Days 2025",
   "mock.news.item4.excerpt": "Skyeton разом з Bertel O. Steen...",
 
-  "ewshelter.title": "EW Shelter",  
+  "ewshelter.title": "РЕБ Шелтер",  
   "ewshelter.subtitle": "Малі тактичні безпілотні авіаційні системи - загартовані війною, універсальні та ефективні",
   "ewshelter.key_features": "Ключові особливості",
   "ewshelter.technical_specs": "Технічні характеристики",
@@ -181,8 +181,8 @@
   "ewshelter.mission_success": "Успіх місії",
   "ewshelter.operating_zones": "Зони дії",
   "ewshelter.payload_types": "Типи корисного навантаження",
-  "ewshelter.ready_deploy": "Готові розгорнути EW Shelter?",
-  "ewshelter.contact_team": "Зв'яжіться з нашою командою, щоб дізнатися більше про можливості EW Shelter та варіанти розгортання",
+  "ewshelter.ready_deploy": "Готові розгорнути РЕБ Шелтер?",
+  "ewshelter.contact_team": "Зв'яжіться з нашою командою, щоб дізнатися більше про можливості РЕБ Шелтер та варіанти розгортання",
   "ewshelter.request_demo": "Запросити демо",
   "ewshelter.download_specs": "Завантажити специфікації",
 
