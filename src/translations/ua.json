@@ -184,5 +184,13 @@
   "raybird.ready_deploy": "Готові розгорнути Raybird?",
   "raybird.contact_team": "Зв'яжіться з нашою командою, щоб дізнатися більше про можливості Raybird та варіанти розгортання",
   "raybird.request_demo": "Запросити демо",
-  "raybird.download_specs": "Завантажити специфікації"
+  "raybird.download_specs": "Завантажити специфікації",
+
+  "footer.request_presentation": "Замовити презентацію",
+  "footer.get_detailed_info": "Отримайте детальну інформацію про наші системи БПЛА",
+  "footer.email_placeholder": "Ваша електронна адреса",
+  "footer.request_button": "Замовити",
+  "footer.request_sent": "Запит надіслано",
+  "footer.presentation_message": "Ми надішлемо вам презентацію найближчим часом.",
+  "footer.all_rights": "Всі права захищені"
 }

@@ -184,5 +184,13 @@
   "raybird.ready_deploy": "Ready to Deploy Raybird?",
   "raybird.contact_team": "Contact our team to learn more about Raybird capabilities and deployment options",
   "raybird.request_demo": "Request Demo",
-  "raybird.download_specs": "Download Specs"
+  "raybird.download_specs": "Download Specs",
+
+  "footer.request_presentation": "Request Presentation",
+  "footer.get_detailed_info": "Get detailed information about our UAV systems",
+  "footer.email_placeholder": "Your email address",
+  "footer.request_button": "Request",
+  "footer.request_sent": "Request Sent",
+  "footer.presentation_message": "We will send you the presentation shortly.",
+  "footer.all_rights": "All rights reserved"
 }

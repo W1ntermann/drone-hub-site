@@ -5,16 +5,18 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage()
   const [email, setEmail] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (email) {
       toast({
-        title: "Request Sent",
-        description: "We will send you the presentation shortly.",
+        title: t('footer.request_sent'),
+        description: t('footer.presentation_message'),
       })
       setEmail("")
     }
@@ -36,16 +38,16 @@ const Footer: React.FC = () => {
       {/* Content */}
       <div className="relative max-w-4xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 sm:mb-6">
-          Request Presentation
+          {t('footer.request_presentation')}
         </h2>
         <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 px-4">
-          Get detailed information about our UAV systems
+          {t('footer.get_detailed_info')}
         </p>
 
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl mx-auto mb-12 sm:mb-16 px-4">
           <Input
             type="email"
-            placeholder="Your email address"
+            placeholder={t('footer.email_placeholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex-1 px-4 sm:px-6 py-4 sm:py-6 bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-white text-sm sm:text-base"
@@ -56,14 +58,14 @@ const Footer: React.FC = () => {
             className="px-6 sm:px-8 py-4 sm:py-6 text-white font-medium hover:opacity-90 transition-opacity whitespace-nowrap text-sm sm:text-base"
             style={{ backgroundColor: '#2a6553' }}
           >
-            Request
+            {t('footer.request_button')}
           </Button>
         </form>
 
         {/* Footer Bottom */}
         <div className="pt-8 border-t border-white/10">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Drone Hub. All rights reserved.
+            © {new Date().getFullYear()} Drone Hub. {t('footer.all_rights')}
           </p>
         </div>
       </div>
