@@ -67,7 +67,7 @@ const Navigation: React.FC = () => {
         <Link href="/" className="flex items-center">
           <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-lg shadow-[#2a6553]/30 ring-2 ring-white/20 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden">
           <Image 
-          src="/assets/logo-site-drone.png"
+          src="/assets/logo-icon.png"
           alt="Logo"
           width={100}
           height={100}
