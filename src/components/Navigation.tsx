@@ -75,6 +75,7 @@ const Navigation: React.FC = () => {
           priority
         />
           </div>
+          
         </Link>
 
           {/* Desktop Menu */}
